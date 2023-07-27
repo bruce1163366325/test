@@ -1,0 +1,14 @@
+基本配置
+1.打开Git Bash
+2.设置用户信息 user.name 后必须加空格
+git config --global user.name "Bruce"
+git config --global user.email "bruce1163366325@gmail.com"
+查看配置信息
+git config --global user.name
+git config --global user.email
+
+删除用户在删除windows凭证无效后可以使用下面方法删除用户
+git config --global --remove user
+
+查看信息
+git config --global --list
