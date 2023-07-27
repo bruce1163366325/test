@@ -28,4 +28,7 @@ alias git lg="log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 4.查看仓库文件状态 git stauts
 5.新增文件进入仓库：git add . (点是通配符，所有文件)
 6.提交文件进入分支：git commint -m 'add file'
-7.
+7.修改文件后，需要再执行5.6 步骤
+
+8.版本回退 git reset --hard commitID
+9.查看已删除的记录：git reflog
