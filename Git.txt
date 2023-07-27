@@ -12,3 +12,20 @@ git config --global --remove user
 
 查看信息
 git config --global --list
+
+配置别名 用于简写命令
+用户目录下，创建文件 .bashrc
+输入：
+alias git-log='git log  --pretty=oneline --all --graph --abbrev-commit'
+alias git lg="log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
+
+配置本地仓库
+1.选择本地某个文件夹，项目的最好
+2.进入目录中 
+3.初始化仓库 git init
+4.查看仓库文件状态 git stauts
+5.新增文件进入仓库：git add . (点是通配符，所有文件)
+6.提交文件进入分支：git commint -m 'add file'
+7.
