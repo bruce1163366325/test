@@ -32,3 +32,11 @@ alias git lg="log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 
 8.版本回退 git reset --hard commitID
 9.查看已删除的记录：git reflog
+
+
+分支：
+查看分支：git branch
+新增分支dev ：git branch dev (dev是自定义名称)
+切换当前分支：git checkout -b dev (-b 表示如果没有该分支，则进行创建)
+合并分支：git merge 分支名 (一般情况都是合并到master)
+删除分支：git branch -d 分支名(-d 需检查 -D强制删除)
