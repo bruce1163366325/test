@@ -61,11 +61,27 @@ ssh -T git@gitee.com
 6.推送本地仓库到远程仓库，使用远程仓库的ssh地址 
 (git remote add origin 加上ssh地址)
 (origin是默认的名称，可以使用其他名称)
+
 git remote add origin git@github.com:bruce1163366325/test.git
 
 7.查看是否添加关联成功 git remote
 
 8.推送本地仓库文件到远程仓库 
 (本地master分支推送到远程main分支，且保存对应关系，下次直接使用 git push 即可)
+
 git push --set-upstream origin master:main
+
+9.查看本地分支与远程分支对应关系
+ git branch -vv
+
+10.克隆，直接下载远程的git文件，并在当前目录中创建本地仓库，一般刚开始使用次命令
+git clone git@github.com:bruce1163366325/test.git
+
+11.抓取命令，更新都抓取到本地，不合并。想合并就需要 git merge 命令
+git fetch 
+
+12.拉取 更新都拉到本地并合并一起
+git pull
+
+
 
