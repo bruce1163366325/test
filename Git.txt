@@ -40,3 +40,30 @@ alias git lg="log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%
 切换当前分支：git checkout -b dev (-b 表示如果没有该分支，则进行创建)
 合并分支：git merge 分支名 (一般情况都是合并到master)
 删除分支：git branch -d 分支名(-d 需检查 -D强制删除)
+
+
+远程仓库 github/gitee
+
+1.github/gitee 中创建仓库
+2.配置公钥 ssh-keygen -t rsa
+3.查看生成的公钥 cat ~/.ssh/id_rsa.pub (如果之前有过公钥会直接覆盖)
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9khN6RXVo+OUaTn33wISGc0Ax/6D74L+tE/EJPfnCemimAfYsRS4ZzT5BrEFQgAKEPrgyCOohXwyoyejJdBgyWE6fFreQKlyqBjYw6S5LTFhohfJl9pAVECFY7bbepKCrtu2O35UTUfuabHEYmjcGjDPxR6VZxl8ZWUBq9re5lUoUS7mT/6zQVjL3BX98eULm0yjIwvt5vtI6ZVZSYzYerP3TdpA4iB45aK9zM7OiDk3sqcZv04MIYy3bEkueELpn2Ij9Pa04YPmfdSKUtgpI1uPP5njUku3hE/mE2efinzQeYTmenEuMrRWruEJLPRMRMPEoE3Jcy7LsAAF4joVCeWuumJl4uzxRP7bmyQ3M9Jp4WaKLQUp+vzlOOrNCURZYILfMRjgfJ4rN5inFm0HnoFaK6SsULPJRcuj3MSgsZMioOxg1mGNWyHJsVgIG60INN6vcbzUezOEyovhRzIBtNXLAujfVYFXkEcv9TxCB6+Hou4AUkXPnrd65FPqy7u8= BruceLi@DESKTOP-CH5IL7M
+
+4.在远程仓库账号中设置ssh keys 将上面生成的ssh-rsa字符串设置进去
+5.查看是否设置成功，通过本地来连接  
+ssh -T git@github.com 
+
+或者国内的gitee 
+
+ssh -T git@gitee.com
+
+6.推送本地仓库到远程仓库，使用远程仓库的ssh地址 
+(git remote add origin 加上ssh地址)
+(origin是默认的名称，可以使用其他名称)
+git remote add origin git@github.com:bruce1163366325/test.git
+
+7.查看是否添加关联成功 git remote
+
+8.推送本地仓库文件到远程仓库 git push origin master
+
