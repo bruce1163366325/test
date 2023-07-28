@@ -65,5 +65,7 @@ git remote add origin git@github.com:bruce1163366325/test.git
 
 7.查看是否添加关联成功 git remote
 
-8.推送本地仓库文件到远程仓库 git push origin master
+8.推送本地仓库文件到远程仓库 
+(本地master分支推送到远程main分支，且保存对应关系，下次直接使用 git push 即可)
+git push --set-upstream origin master:main
 
