@@ -95,7 +95,7 @@ IDEA中设置GIT
 5.选择第三步中的本地项目
 6.顶部导航栏出现git的操作按钮，点击勾选项，全选
 7.写入提交备注，提交
-8.左下角 versions control ->log 可查看提交日志
+8.左下角 versions control 或者 Git  ->log 可查看提交日志
 
 ---推入远程仓库---
 9.VCS->Git->Push
